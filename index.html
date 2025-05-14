@@ -14,64 +14,50 @@
     body {
       background-color: #fff;
       color: #000;
+      line-height: 1.6;
     }
     nav {
-      background-color: transparent;
-      padding: 20px 50px;
-      position: absolute;
-      width: 100%;
-      top: 0;
+      position: fixed;
+      top: 20px;
+      right: 50px;
       z-index: 1000;
     }
     nav .container {
-      max-width: 1200px;
-      margin: 0 auto;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-end;
     }
     nav h1 {
       font-size: 1.5rem;
       font-weight: bold;
       color: #000;
+      margin-bottom: 20px;
     }
     nav ul {
       display: flex;
+      flex-direction: column;
       list-style: none;
     }
     nav ul li {
-      margin-left: 30px;
+      margin-bottom: 15px;
     }
     nav ul li a {
-      color: #000;
+      color: #666;
       text-decoration: none;
       font-size: 1rem;
+      transition: color 0.3s;
     }
     nav ul li a:hover {
       color: #FDC435;
     }
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 50px;
-  overflow: hidden; /* Ensures the image stays within bounds */
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  width: 35%;
-  height: 35%; /* Equal width and height for a perfect circle */
-  background-color: #FDC435;
-  clip-path: circle(50% at 50% 50%); /* Perfect circle */
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
+    .hero {
+      position: relative;
+      min-height: 100vh; /* Ensure minimum height to accommodate the circle */
+      display: flex;
+      align-items: center;
+      padding: 0 50px;
+      overflow: visible; /* Ensure the circle isn't clipped by overflow */
+    }
     .hero .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -79,32 +65,36 @@
       align-items: center;
       position: relative;
       z-index: 2;
+      min-height: 600px; /* Set a minimum height to ensure the circle fits */
     }
     .hero-content {
-      flex: 1;
+      flex: 2;
+      padding-right: 40px;
     }
     .hero-content p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
+      font-size: 1.2rem;
       color: #333;
+      margin-bottom: 1rem;
     }
     .hero-content h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: bold;
       margin-bottom: 1rem;
     }
     .hero-content .buttons {
       display: flex;
-      gap: 15px;
+      gap: 10px;
+      margin-top: 1.5rem;
     }
-    .hero-content button,
-    .hero-content a.button {
+    .hero-content .button {
       padding: 10px 20px;
       border: none;
       border-radius: 25px;
       font-weight: bold;
       cursor: pointer;
       text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s, color 0.3s;
     }
     .hero-content .projects-btn {
       background-color: #FDC435;
@@ -131,23 +121,34 @@
       background-color: #000;
       color: #fff;
     }
-.hero-image {
-  flex: 1;
-  text-align: right;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-image img {
-  max-width: 220px;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
-  clip-path: circle(50% at 50% 50%); /* Perfect circle matching the yellow shape */
-  z-index: 2;
-}
+    .hero-image {
+      flex: 1;
+      text-align: right;
+      position: relative;
+      z-index: 2;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      width: 30%;
+      height: 30%; /* Equal to width for a perfect circle */
+      background-color: #FDC435;
+      border-radius: 50%; /* Ensures a perfect circle using border-radius instead of clip-path for simplicity */
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    .hero-image img {
+      max-width: 200px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      border-radius: 50%; /* Matches the yellow circle shape */
+      z-index: 2;
+    }
     section {
       padding: 80px 50px;
     }
@@ -286,16 +287,20 @@
       padding: 20px;
     }
     @media (max-width: 768px) {
+      nav {
+        position: static;
+        padding: 20px;
+      }
       nav .container {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
       }
       nav ul {
-        flex-direction: column;
-        margin-top: 10px;
+        flex-direction: row;
+        margin-top: 0;
       }
       nav ul li {
-        margin: 10px 0;
+        margin: 0 15px;
       }
       .hero {
         flex-direction: column;
@@ -303,10 +308,15 @@
         height: auto;
         padding: 100px 20px;
       }
+      .hero .container {
+        min-height: 500px; /* Adjusted for mobile */
+      }
       .hero::before {
-        width: 100%;
+        width: 50%;
         height: 50%;
-        clip-path: ellipse(100% 50% at 50% 0%);
+        right: 25%;
+        top: 30%;
+        transform: translateY(0);
       }
       .hero-content {
         margin-bottom: 20px;
@@ -317,11 +327,12 @@
       .hero-content p {
         font-size: 1rem;
       }
-      .hero-image {
-        text-align: center;
-      }
       .hero-image img {
-        max-width: 300px;
+        position: static;
+        transform: none;
+        max-width: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
       }
       .portfolio-grid {
         grid-template-columns: 1fr;
@@ -348,9 +359,7 @@
       <div class="hero-content">
         <p>FULL STACK DEVELOPER</p>
         <h1>Hello, my name is Veronica Kinyua</h1>
-        <p>
-          I make the complex simple, building responsive and scalable web applications using modern technologies.
-        </p>
+        <p>I make the complex simple, building responsive and scalable web applications using modern technologies.</p>
         <div class="buttons">
           <a href="#portfolio" class="button projects-btn">Projects</a>
           <a href="https://www.linkedin.com/in/veronicakinyua12873" class="button linkedin-btn">LinkedIn</a>
