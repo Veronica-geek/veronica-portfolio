@@ -16,53 +16,53 @@
       color: #000;
       line-height: 1.6;
     }
- nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1000;
-  padding: 10px 0;
-}
-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-nav h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  background-color: #FDC435;
-  padding: 5px 10px;
-}
-nav ul li {
-  margin: 0 15px;
-}
-nav ul li a {
-  color: #000;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-nav ul li a:hover {
-  color: #666;
-}
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      background-color: #FDC435;
+      padding: 5px 10px;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #666;
+    }
     .hero {
       position: relative;
-      min-height: 100vh; /* Ensure minimum height to accommodate the circle */
+      min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 0 50px;
-      overflow: visible; /* Ensure the circle isn't clipped by overflow */
+      overflow: visible;
       margin-top: 60px;
     }
     .hero .container {
@@ -72,7 +72,7 @@ nav ul li a:hover {
       align-items: center;
       position: relative;
       z-index: 2;
-      min-height: 700px; /* Increased to ensure the circle fits fully */
+      min-height: 700px;
     }
     .hero-content {
       flex: 2;
@@ -139,10 +139,10 @@ nav ul li a:hover {
       position: absolute;
       top: 50%;
       right: 10%;
-      width: 300px; /* Fixed pixel value for a perfect circle */
-      height: 300px; /* Equal to width for a perfect circle */
+      width: 300px;
+      height: 300px;
       background-color: #FDC435;
-      border-radius: 50%; /* Ensures a perfect circle */
+      border-radius: 50%;
       transform: translateY(-50%);
       z-index: 1;
     }
@@ -153,7 +153,7 @@ nav ul li a:hover {
       top: 50%;
       right: 10%;
       transform: translateY(-50%);
-      border-radius: 50%; /* Matches the yellow circle shape */
+      border-radius: 50%;
       z-index: 2;
     }
     section {
@@ -293,24 +293,23 @@ nav ul li a:hover {
       text-align: center;
       padding: 20px;
     }
-  @media (max-width: 768px) {
-  nav .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav h1 {
-    margin-bottom: 10px;
-  }
-  nav ul {
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    padding: 5px 0;
-  }
-  nav ul li {
-    margin: 0 10px;
-  }
-}
+    @media (max-width: 768px) {
+      nav .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav h1 {
+        margin-bottom: 10px;
+      }
+      nav ul {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 5px 0;
+      }
+      nav ul li {
+        margin: 0 10px;
+      }
       .hero {
         flex-direction: column;
         text-align: center;
@@ -318,11 +317,11 @@ nav ul li a:hover {
         padding: 100px 20px;
       }
       .hero .container {
-        min-height: 500px; /* Adjusted for mobile */
+        min-height: 500px;
       }
       .hero::before {
         width: 250px;
-        height: 250px; /* Equal for perfect circle */
+        height: 250px;
         right: 50%;
         top: 20%;
         transform: translate(50%, 0);
@@ -357,6 +356,7 @@ nav ul li a:hover {
     <div class="container">
       <h1>Veronica Kinyua</h1>
       <ul>
+        <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
