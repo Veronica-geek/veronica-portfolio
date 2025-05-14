@@ -62,12 +62,13 @@
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 70%;
-  height: 75%;
+  top: 50%;
+  right: 10%;
+  width: 30%;
+  height: 30%;
   background-color: #FDC435;
-  clip-path: ellipse(50% 70% at 80% 30%);
+  clip-path: ellipse(50% 60% at 50% 50%);
+  transform: translateY(-50%);
   z-index: 1;
 }
 
@@ -138,14 +139,14 @@
 }
 
 .hero-image img {
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
-  border-radius: 10px;
   position: absolute;
-  top: 10%;
-  right: 5%;
-  transform: translateY(-10%);
-  clip-path: ellipse(50% 70% at 80% 30%); /* Matches the shape of the background */
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  clip-path: ellipse(50% 60% at 50% 50%);
+  z-index: 2;
 }
     section {
       padding: 80px 50px;
