@@ -130,7 +130,7 @@
     }
     .hero-image {
   flex: 1;
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 2;
 }
@@ -153,8 +153,8 @@
   height: auto;
   position: absolute;
   top: 50%;
-  right: 10%;
-  transform: translate(0, -50%);
+  right: calc(10% + 50px); /* Adjusts to center the image within the circle */
+  transform: translateY(-50%);
   border-radius: 50%;
   z-index: 2;
 }
