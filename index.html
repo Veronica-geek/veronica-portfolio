@@ -56,6 +56,7 @@
   display: flex;
   align-items: center;
   padding: 0 50px;
+  overflow: hidden; /* Ensures the image stays within bounds */
 }
 
 .hero::before {
@@ -63,12 +64,13 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 60%;
-  height: 100%;
+  width: 70%;
+  height: 75%;
   background-color: #FDC435;
-  clip-path: ellipse(60% 100% at 70% 50%);
+  clip-path: ellipse(50% 70% at 80% 30%);
   z-index: 1;
 }
+
     .hero .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -128,15 +130,23 @@
       background-color: #000;
       color: #fff;
     }
-    .hero-image {
-      flex: 1;
-      text-align: right;
-    }
-    .hero-image img {
-      max-width: 400px;
-      height: auto;
-      border-radius: 10px;
-    }
+.hero-image {
+  flex: 1;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  transform: translateY(-10%);
+  clip-path: ellipse(50% 70% at 80% 30%); /* Matches the shape of the background */
+}
     section {
       padding: 80px 50px;
     }
