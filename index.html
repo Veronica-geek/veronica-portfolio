@@ -65,9 +65,9 @@
   top: 50%;
   right: 5%;
   width: 35%;
-  height: 50%;
+  height: 35%; /* Equal width and height for a perfect circle */
   background-color: #FDC435;
-  clip-path: ellipse(45% 65% at 65% 35%);
+  clip-path: circle(50% at 50% 50%); /* Perfect circle */
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -145,7 +145,7 @@
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
-  clip-path: ellipse(45% 65% at 65% 35%);
+  clip-path: circle(50% at 50% 50%); /* Perfect circle matching the yellow shape */
   z-index: 2;
 }
     section {
