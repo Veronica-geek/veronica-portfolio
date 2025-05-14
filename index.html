@@ -128,11 +128,17 @@
       background-color: #000;
       color: #fff;
     }
-    .hero-image {
+/*     .hero-image {
       flex: 1;
       text-align: right;
       position: relative;
-      z-index: 2;
+      z-index: 2; */
+      .hero-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
     }
     .hero::before {
       content: '';
@@ -149,12 +155,12 @@
     .hero-image img {
       max-width: 200px;
       height: auto;
-      position: absolute;
+      position: center;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       border-radius: 50%;
-      z-index: 2;
+/*       z-index: 2; */
     }
     section {
       padding: 80px 50px;
