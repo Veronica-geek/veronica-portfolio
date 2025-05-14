@@ -65,7 +65,7 @@
       align-items: center;
       position: relative;
       z-index: 2;
-      min-height: 600px; /* Set a minimum height to ensure the circle fits */
+      min-height: 700px; /* Increased to ensure the circle fits fully */
     }
     .hero-content {
       flex: 2;
@@ -132,10 +132,10 @@
       position: absolute;
       top: 50%;
       right: 10%;
-      width: 30%;
-      height: 30%; /* Equal to width for a perfect circle */
+      width: 300px; /* Fixed pixel value for a perfect circle */
+      height: 300px; /* Equal to width for a perfect circle */
       background-color: #FDC435;
-      border-radius: 50%; /* Ensures a perfect circle using border-radius instead of clip-path for simplicity */
+      border-radius: 50%; /* Ensures a perfect circle */
       transform: translateY(-50%);
       z-index: 1;
     }
@@ -312,11 +312,11 @@
         min-height: 500px; /* Adjusted for mobile */
       }
       .hero::before {
-        width: 50%;
-        height: 50%;
-        right: 25%;
-        top: 30%;
-        transform: translateY(0);
+        width: 250px;
+        height: 250px; /* Equal for perfect circle */
+        right: 50%;
+        top: 20%;
+        transform: translate(50%, 0);
       }
       .hero-content {
         margin-bottom: 20px;
