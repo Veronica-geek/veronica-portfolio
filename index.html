@@ -50,27 +50,27 @@
     nav ul li a:hover {
       color: #FDC435;
     }
-    .hero {
-      background-color: #fff;
-      position: relative;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 0 50px;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 50%;
-      height: 100%;
-      background-color: #FDC435;
-      clip-path: ellipse(70% 100% at 100% 50%);
-      z-index: 1;
-    }
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #FDC435;
+  clip-path: ellipse(60% 100% at 70% 50%);
+  z-index: 1;
+}
     .hero .container {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       align-items: center;
