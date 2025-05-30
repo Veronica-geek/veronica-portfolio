@@ -22,7 +22,9 @@
       width: 100%;
       background-color: #fff;
       z-index: 1000;
-      padding: 10px 0;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid #eee;
     }
     nav .container {
       display: flex;
@@ -30,31 +32,42 @@
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 30px;
     }
     nav h1 {
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 1.8rem;
+      font-weight: 700;
       color: #000;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      transition: color 0.3s ease;
+    }
+    nav h1:hover {
+      color: #FDC435;
     }
     nav ul {
       display: flex;
       list-style: none;
-      background-color: #FDC435;
-      padding: 5px 10px;
+      background: linear-gradient(135deg, #FDC435 0%, #ffb300 100%);
+      padding: 8px 15px;
+      border-radius: 20px;
     }
     nav ul li {
-      margin: 0 15px;
+      margin: 0 20px;
     }
     nav ul li a {
       color: #000;
       text-decoration: none;
-      font-size: 1rem;
-      font-weight: bold;
-      transition: color 0.3s;
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 15px;
     }
     nav ul li a:hover {
-      color: #666;
+      color: #fff;
+      background-color: #333;
+      transform: scale(1.05);
     }
     .hero {
       position: relative;
@@ -68,11 +81,13 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       position: relative;
       z-index: 2;
-      min-height: 500px;
+      min-height: 400px;
+      text-align: center;
     }
     .hero-content {
       flex: 2;
@@ -128,31 +143,6 @@
     .hero-content .cv-btn:hover {
       background-color: #000;
       color: #fff;
-    }
-    .hero-image {
-      flex: 1;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 10%;
-      width: 300px;
-      height: 300px;
-      background-color: #FDC435;
-      border-radius: 50%;
-      transform: translateY(-50%);
-      z-index: 1;
-    }
-    .hero-image img {
-      max-width: 200px;
-      height: auto;
-      position: relative;
-      border-radius: 50%;
-      z-index: 2;
     }
     section {
       padding: 80px 20px;
@@ -292,7 +282,6 @@
       text-align: center;
       padding: 20px;
     }
-    /* Enhanced Media Queries */
     @media (max-width: 1024px) {
       .hero .container {
         flex-direction: column;
@@ -303,34 +292,26 @@
         padding-right: 0;
         margin-bottom: 20px;
       }
-      .hero::before {
-        right: 50%;
-        transform: translate(50%, -50%);
-        width: 250px;
-        height: 250px;
-      }
-      .hero-image img {
-        position: relative;
-        max-width: 180px;
-        transform: none;
-      }
     }
     @media (max-width: 768px) {
       nav .container {
         flex-direction: column;
         align-items: center;
+        padding: 0 20px;
       }
       nav h1 {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
       }
       nav ul {
         flex-direction: row;
         justify-content: center;
         width: 100%;
-        padding: 5px 0;
+        padding: 8px 0;
+        border-radius: 15px;
       }
       nav ul li {
-        margin: 0 10px;
+        margin: 0 15px;
       }
       .hero {
         padding: 80px 20px;
@@ -342,13 +323,6 @@
       .hero-content p {
         font-size: 1rem;
       }
-      .hero::before {
-        width: 200px;
-        height: 200px;
-      }
-      .hero-image img {
-        max-width: 150px;
-      }
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
@@ -358,26 +332,20 @@
     }
     @media (max-width: 480px) {
       nav h1 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
       nav ul li {
-        margin: 0 5px;
+        margin: 0 10px;
       }
       nav ul li a {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        padding: 5px 8px;
       }
       .hero-content h1 {
         font-size: 1.8rem;
       }
       .hero-content p {
         font-size: 0.9rem;
-      }
-      .hero::before {
-        width: 150px;
-        height: 150px;
-      }
-      .hero-image img {
-        max-width: 120px;
       }
       .hero .container {
         min-height: 400px;
@@ -420,9 +388,6 @@
           <a href="https://www.linkedin.com/in/veronicakinyua12873" class="button linkedin-btn">LinkedIn</a>
           <a href="veronica kinyua cv ().pdf" download class="button cv-btn">Download CV</a>
         </div>
-      </div>
-      <div class="hero-image">
-        <img src="images/profile3.png" alt="Veronica Kinyua">
       </div>
     </div>
   </section>
