@@ -166,6 +166,35 @@
       background-color: #FDC435;
       margin: 10px auto;
     }
+    #services {
+      background-color: #fff;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+    .service-card p {
+      color: #333;
+      font-size: 1rem;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
     #portfolio {
       background-color: #fff;
     }
@@ -323,7 +352,7 @@
       .hero-content p {
         font-size: 1rem;
       }
-      .portfolio-grid {
+      .services-grid, .portfolio-grid {
         grid-template-columns: 1fr;
       }
       section {
@@ -350,8 +379,17 @@
       .hero .container {
         min-height: 400px;
       }
-      .portfolio-card img {
+      .service-card, .portfolio-card img {
         height: 150px;
+      }
+      .service-card {
+        padding: 15px;
+      }
+      .service-card h3 {
+        font-size: 1.1rem;
+      }
+      .service-card p {
+        font-size: 0.9rem;
       }
       .contact-container {
         padding: 20px;
@@ -372,6 +410,7 @@
       <h1>Veronica Kinyua</h1>
       <ul>
         <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -380,13 +419,41 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <p>FULL STACK DEVELOPER</p>
+        <p>SOFTWARE DEVELOPER</p>
         <h1>Hello, my name is Veronica Kinyua</h1>
         <p>I make the complex simple, building responsive and scalable web applications using modern technologies.</p>
         <div class="buttons">
           <a href="#portfolio" class="button projects-btn">Projects</a>
           <a href="https://www.linkedin.com/in/veronicakinyua12873" class="button linkedin-btn">LinkedIn</a>
           <a href="veronica kinyua cv ().pdf" download class="button cv-btn">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Full-Stack Development</h3>
+          <p>Building responsive and scalable web applications using modern technologies.</p>
+        </div>
+        <div class="service-card">
+          <h3>Data Analysis</h3>
+          <p>Leveraging R and MySQL to analyze and visualize data for actionable insights.</p>
+        </div>
+        <div class="service-card">
+          <h3>UI/UX Design</h3>
+          <p>Designing intuitive and visually appealing interfaces for seamless user experiences.</p>
+        </div>
+        <div class="service-card">
+          <h3>RESTful API Development</h3>
+          <p>Designing and implementing APIs for seamless integration and functionality.</p>
+        </div>
+        <div class="service-card">
+          <h3>Project Coordination</h3>
+          <p>Ensuring smooth collaboration and timely delivery in tech projects.</p>
         </div>
       </div>
     </div>
